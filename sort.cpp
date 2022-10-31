@@ -34,6 +34,12 @@ void print_array()
     }
     window.display();
 }
+void randomarray(int a[],int n,int max)
+{
+    int i;
+    srand(5);
+    for(i=0;i<n;i++)a[i]=rand()%max_;
+}
 void bubblesort(int a[],int n,int start)
 {
     int i,k;
@@ -41,9 +47,9 @@ void bubblesort(int a[],int n,int start)
     {
         for(k=start;k<n-i;k++)
         {
-        usleep(50);
-print_array();
-    if(a[k]>a[k+1])swap(a[k],a[k+1]);
+            usleep(50);
+            print_array();
+            if(a[k]>a[k+1])swap(a[k],a[k+1]);
 
         }
     }
@@ -126,12 +132,6 @@ void quicksort(int a[],int left,int right)
          quicksort(a, left, pivot-1);
          quicksort(a, pivot+1, right);
     }
-}
-void randomarray(int a[],int n,int max)
-{
-    int i;
-    srand(5);
-    for(i=0;i<n;i++)a[i]=rand()%max_;
 }
 void selectionsort(int a[],int n,int start)
 {
