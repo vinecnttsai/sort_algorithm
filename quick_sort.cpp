@@ -40,7 +40,7 @@ void randomarray(int a[],int n,int max)
     srand(5);
     for(i=0;i<n;i++)a[i]=rand()%max_;
 }
-int paritition(int a[],int left,int right)
+int partition(int a[],int left,int right)
 {
     int pivot = a[left];
     print_array();
@@ -66,7 +66,7 @@ void quicksort(int a[],int left,int right)
     if (left<right)
     {
          print_array();
-         int pivot = paritition(a, left, right);
+         int pivot = partition(a, left, right);
          quicksort(a, left, pivot-1);
          quicksort(a, pivot+1, right);
     }
